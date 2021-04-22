@@ -1,9 +1,7 @@
 package com.calculator;
 
 public class Calc {
-    public Calc(){
-        super();
-    }
+
     public int add(String[] operand, String[] operator){
         int q = operator.length-1;
         String sign = operator[q];

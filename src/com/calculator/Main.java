@@ -5,50 +5,22 @@ import java.util.Scanner;
 public class Main {
     static Scanner s = new Scanner(System.in);
     static Action message = new Action();
-    static GetArgs operator = new GetArgs();
+    static IntIO operator = new IntIO();
     static Calc result = new Calc();
+    static RomaIO romaConvert = new RomaIO();
     public static void main(String[] args) {
-        message.Hello();
         String exp = s.nextLine(); // Вводим арифмктическое выражение
-        String[] i = operator.getOperator(exp);
-//        for (String d : i){
-//            System.out.print(d + " ");}
-//        System.out.println();
-        String[] j = operator.getOperand(exp);
-//        for (String f : j){
-//            System.out.print(f + " ");}
-//        System.out.println();
-        System.out.println(result.add(i, j));
-
-        String[] arab = new String[]{"10", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-        String[] roma = new String[]{"X","I","II","III","IV","V","VI","VII","VIII","IX"};
-        String romaStr = "-XI+III";
-
+        boolean checkExp = exp.matches("([\\d]+)");
+        if (!checkExp) {
+            String[] newOperator = operator.getOperator(exp); // Выделяем арифметические знаки операций
+            String[] newOperand = operator.getOperand(exp); // Выделяем числа
+            System.out.println(result.add(newOperand, newOperator)); // Скармливаем все калькулятору, получаем результат
+        } else {
+            String[] romaOperand = romaConvert.romaOperand(exp);
+            String[] arabOperand = romaConvert.convertRomaToInt(romaOperand);
+            String[] romaOperator = romaConvert.romaOperator(exp);
+            int res = result.add(arabOperand, romaOperator);
+            System.out.println(romaConvert.convertIntToRoma(res));
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        GetArgs arg = new GetArgs();
-//        Calc calc = new Calc();
-//
-//
-//
-//        System.out.println(message.Hello());
-//        System.out.println(message.inputNum());
-//        arg.args();
-//        System.out.println(message.resMess() + calc.result);
