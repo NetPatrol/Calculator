@@ -7,21 +7,28 @@ public class RomaIO {
     String[] roma;
     String res;
     /**
-     * Получаем все числа из введенного выражения
+     * We get all the numbers from the entered expression
+     * by splitting the string through, using a regular expression
      * @return*/
     public String[] romaOperand(String exp){
         roma = exp.split("([ -A-Z]+)");
         return roma;
     }
     /**
-     * Плучаем знаки выражения [+ - * /]
+     * Emitting expression signs [+ - * /]
+     * by splitting the string through, using a regular expression
      * @return*/
     public String[] romaOperator(String exp){
         roma = exp.split("([^ -A-Z]+)");
         return roma;
     }
     /**
-     * Конвертируем римские числа в арабские
+     * Convert Roman Numbers to Arabic Numbers
+     * for which we create a correspondence dictionary,
+     * where the key is a Roman number in string format,
+     * and the value is the corresponding number
+     *
+     * e.g. Roman numerals II and V obtained from the expression will be converted to Arabic numerals 2 and 5
      * @return*/
     public String[] convertRomaToInt(String[] romaOperand){
         Map<String, String> romaToInt = new HashMap<>();
@@ -40,7 +47,14 @@ public class RomaIO {
         }
         return romaOperand;
     }
-
+    /**
+     * Convert result to Roman Numbers
+     * for which we create a correspondence dictionary,
+     * where the key is a resulting Arabic number in int format,
+     * and the value is the Roman number in String format
+     *
+     * e.g. the result is 7 will be converted to Roman VII
+     * @return*/
     public String convertIntToRoma(int result){
         Map<Integer, String> intToRoma = new HashMap<>();
         intToRoma.put(1, "I");

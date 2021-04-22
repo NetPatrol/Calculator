@@ -5,22 +5,16 @@ import java.util.Scanner;
 public class Main {
     static Scanner s = new Scanner(System.in);
     static Action message = new Action();
-    static IntIO operator = new IntIO();
-    static Calc result = new Calc();
-    static RomaIO romaConvert = new RomaIO();
+    static Logic log = new Logic();
     public static void main(String[] args) {
-        String exp = s.nextLine(); // Вводим арифмктическое выражение
+        System.out.println(message.Hello());
+        System.out.println(message.inputNum());
+        String exp = s.nextLine();
         boolean checkExp = exp.matches("([\\d]+)");
         if (!checkExp) {
-            String[] newOperator = operator.getOperator(exp); // Выделяем арифметические знаки операций
-            String[] newOperand = operator.getOperand(exp); // Выделяем числа
-            System.out.println(result.add(newOperand, newOperator)); // Скармливаем все калькулятору, получаем результат
+            System.out.println(log.answerInt(exp));
         } else {
-            String[] romaOperand = romaConvert.romaOperand(exp);
-            String[] arabOperand = romaConvert.convertRomaToInt(romaOperand);
-            String[] romaOperator = romaConvert.romaOperator(exp);
-            int res = result.add(arabOperand, romaOperator);
-            System.out.println(romaConvert.convertIntToRoma(res));
+            System.out.println(log.romaAnswer(exp));
         }
     }
 }
