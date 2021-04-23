@@ -2,25 +2,19 @@ package com.calculator;
 
 public class Action {
     private static String m;
+    private static String mb;
     /**
     * Welcome message.
     * */
     public String Hello(){
-        m = "Hello! it's my Calculator two numbers a and b";
+        m = "============================================= \nHello! it's my Calculator two numbers a and b";
         return m;
     }
     /**
      * Input message.
      * */
     public String inputNum(){
-        m = "Input expression";
-        return m;
-    }
-    /**
-     * Input operator.
-     * */
-    public String inputSign(){
-        m = "Input operator";
+        m = "Input expression \n==================";
         return m;
     }
     /**
@@ -32,18 +26,14 @@ public class Action {
         return m;
     }
     /**
-     * The message that is displayed if a non-expression operator
-     * is entered
-     * */
-    public String errSign(){
-        m = "It is not an operator";
-        return m;
-    }
-    /**
      * Calculation result message
      * */
     public String resMess(){
-        m = "the result of your torment: ";
+        m = "the result of your torment: \n==================\n";
+        return m;
+    }
+    public String errorInput(){
+        m = "Неверный ввод";
         return m;
     }
 }
