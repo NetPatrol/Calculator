@@ -2,9 +2,15 @@ package com.calculator.calc;
 
 import com.calculator.exeptions.CalcExeption;
 import com.calculator.exeptions.Proof;
-
 import java.util.Arrays;
-
+/**
+ * Parse the string array and get an array of int type,
+ * together with that we check the resulting array for
+ * compliance with the conditions for exceeding the permissible
+ * values, as well as for the correctness of the set of
+ * Roman numerals
+ *
+ * */
 public class Parser {
     static int[] operand;
     public static int[] getArab(String[] exp) {
