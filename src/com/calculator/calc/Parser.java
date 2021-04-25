@@ -2,6 +2,7 @@ package com.calculator.calc;
 
 import com.calculator.exeptions.CalcExeption;
 import com.calculator.exeptions.Proof;
+
 import java.util.Arrays;
 /**
  * Parse the string array and get an array of int type,
@@ -29,6 +30,5 @@ public class Parser {
             System.err.println("Одно из чисел, введенных вами не существует.");
             System.exit(0);
         }
-        Parser.operand = operand;
     }
 }

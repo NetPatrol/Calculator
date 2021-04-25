@@ -2,14 +2,14 @@ package com.calculator.out;
 
 public class InstructMessages {
     public static void actoion() {
-        System.out.print("\t\t\t\t\t\t\tВведите выражение: \n");
+        System.out.print("\t\t\tВведите выражение: \n");
     }
     public static void choice() {
         System.out.println(
-        Color.ANSI_CYAN+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n" +Color.ANSI_RESET+
-        Color.ANSI_CYAN+"+"+Color.ANSI_YELLOW+"\t\t\t\t\t\t\t1........ Продолжить"+Color.ANSI_RESET + Color.ANSI_CYAN+"\t\t\t\t\t +\n"+
-        Color.ANSI_CYAN+"+"+Color.ANSI_YELLOW+"\t\t\t\t\t\t\t2.......... Выход"+Color.ANSI_RESET + Color.ANSI_CYAN+"\t\t\t\t\t\t +\n"+
-        Color.ANSI_CYAN+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"+Color.ANSI_RESET);
+        Color.ANSI_CYAN+"   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n" +Color.ANSI_RESET+
+        Color.ANSI_CYAN+"   +\t\t    "+Color.ANSI_YELLOW+"1........ Продолжить          "+Color.ANSI_RESET + Color.ANSI_CYAN+"    \t\t   +\n"+
+        Color.ANSI_CYAN+"   +\t\t    "+Color.ANSI_YELLOW+"2.......... Выход          "+Color.ANSI_RESET + Color.ANSI_CYAN+"\t\t\t   +\n"+
+        Color.ANSI_CYAN+"   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"+Color.ANSI_RESET);
     }
     public static void helloUser() {
         System.out.println("   =======================================================================");

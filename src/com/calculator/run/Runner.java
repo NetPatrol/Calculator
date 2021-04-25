@@ -1,18 +1,17 @@
 package com.calculator.run;
+
+import com.calculator.calc.IntResult;
+import com.calculator.calc.RomaResult;
+import com.calculator.exeptions.Proof;
+import com.calculator.out.Color;
+import com.calculator.out.InstructMessages;
+
+import java.util.Scanner;
 /*
 
    This is the starter class
 
 */
-
-import com.calculator.out.Color;
-import com.calculator.out.InstructMessages;
-import com.calculator.calc.IntResult;
-import com.calculator.calc.RomaResult;
-import com.calculator.exeptions.Proof;
-
-import java.util.Scanner;
-
 public class Runner {
     private static final Scanner s = new Scanner(System.in);
 
@@ -22,9 +21,9 @@ public class Runner {
         String exp = Input.getExp();
 
         if (Proof.isCheckExpInt(exp))
-            System.out.println(Color.ANSI_PURPLE + "Результат равен: " + IntResult.intResult(exp) + Color.ANSI_RESET);
+            System.out.println(Color.ANSI_PURPLE + "\t\t\tРезультат равен: " + IntResult.intResult(exp) + Color.ANSI_RESET);
         else if (Proof.checkRomaSymbols(exp))
-            System.out.println(Color.ANSI_PURPLE + "Результат равен: " + RomaResult.intResult(exp) + Color.ANSI_RESET);
+            System.out.println(Color.ANSI_PURPLE + "\t\t\tРезультат равен: " + RomaResult.intResult(exp) + Color.ANSI_RESET);
         System.out.println();
         InstructMessages.choice();
         String x = s.nextLine();
