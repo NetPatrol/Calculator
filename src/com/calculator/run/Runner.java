@@ -1,10 +1,12 @@
-package com.calculator.main;
+package com.calculator.run;
 /*
 
    This is the starter class
 
 */
 
+import com.calculator.out.Color;
+import com.calculator.out.InstructMessages;
 import com.calculator.calc.IntResult;
 import com.calculator.calc.RomaResult;
 import com.calculator.exeptions.Proof;

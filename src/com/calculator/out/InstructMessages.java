@@ -1,4 +1,4 @@
-package com.calculator.main;
+package com.calculator.out;
 
 public class InstructMessages {
     public static void actoion() {

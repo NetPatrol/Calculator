@@ -1,4 +1,4 @@
-package com.calculator.main;
+package com.calculator.run;
 
 import com.calculator.exeptions.InputExeption;
 import com.calculator.exeptions.Proof;
