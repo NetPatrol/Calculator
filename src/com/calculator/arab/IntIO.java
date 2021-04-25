@@ -1,26 +1,22 @@
-package com.calculator;
+package com.calculator.arab;
 
 public class IntIO {
-    String[] operator;
-    String[] operand;
-
-    public IntIO(){
-        super();
-    }
+    private static String[] operator;
+    private static String[] operand;
     /**
      * We get all the numbers from the entered expression
      * by splitting the string through a split, using a regular expression
      * @return*/
-    public String[] getOperand(String exp){
-        operand = exp.split("([^-0-9]+)");
+    public static String[] getOperand(String exp) {
+        operand = exp.split("\\D+");
         return operand;
     }
     /**
      * Emitting expression signs [+ - * /]
      * by splitting the string through, using a regular expression
      * @return*/
-    public String[] getOperator(String exp){
-        operator = exp.split("([-0 1 2 3 4 5 6 7 8 9]+)");
+    public static String[] getOperator(String exp){
+        operator = exp.split("\\d+");
         return operator;
     }
 }

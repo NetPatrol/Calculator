@@ -1,16 +1,16 @@
-package com.calculator;
+package com.calculator.roma;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RomaIO {
-    String[] roma;
-    String res;
+    private static String[] roma;
+    private static String res;
     /**
      * We get all the numbers from the entered expression
      * by splitting the string through, using a regular expression
      * @return*/
-    public String[] romaOperand(String exp){
+    public static String[] romaOperand(String exp){
         roma = exp.split("([ -A-Z]+)");
         return roma;
     }
@@ -18,7 +18,7 @@ public class RomaIO {
      * Emitting expression signs [+ - * /]
      * by splitting the string through, using a regular expression
      * @return*/
-    public String[] romaOperator(String exp){
+    public static String[] romaOperator(String exp){
         roma = exp.split("([^ -A-Z]+)");
         return roma;
     }
@@ -30,7 +30,7 @@ public class RomaIO {
      *
      * e.g. Roman numerals II and V obtained from the expression will be converted to Arabic numerals 2 and 5
      * @return*/
-    public String[] convertRomaToInt(String[] romaOperand){
+    public static String[] convertRomaToInt(String[] romaOperand){
         Map<String, String> romaToInt = new HashMap<>();
         romaToInt.put("I", "1");
         romaToInt.put("II", "2");
@@ -42,6 +42,24 @@ public class RomaIO {
         romaToInt.put("VIII", "8");
         romaToInt.put("IX", "9");
         romaToInt.put("X", "10");
+        romaToInt.put("XI", "11");
+        romaToInt.put("XII", "12");
+        romaToInt.put("XIII", "13");
+        romaToInt.put("XIV", "14");
+        romaToInt.put("XV", "15");
+        romaToInt.put("XVI", "16");
+        romaToInt.put("XVII", "17");
+        romaToInt.put("XVIII", "18");
+        romaToInt.put("XIX", "19");
+        romaToInt.put("XX", "20");
+        romaToInt.put("XXX", "30");
+        romaToInt.put("XL", "40");
+        romaToInt.put("L", "50");
+        romaToInt.put("LX", "60");
+        romaToInt.put("LXX", "70");
+        romaToInt.put("LXXX", "80");
+        romaToInt.put("XC", "90");
+        romaToInt.put("C", "100");
         for (int k = 0; k < romaOperand.length; k++){
             romaOperand[k] = romaToInt.get(romaOperand[k]);
         }
@@ -55,7 +73,7 @@ public class RomaIO {
      *
      * e.g. the result is 7 will be converted to Roman VII
      * @return*/
-    public String convertIntToRoma(int result){
+    public static String convertIntToRoma(int result){
         Map<Integer, String> intToRoma = new HashMap<>();
         intToRoma.put(1, "I");
         intToRoma.put(2, "II");
@@ -67,6 +85,24 @@ public class RomaIO {
         intToRoma.put(8, "VIII");
         intToRoma.put(9, "IX");
         intToRoma.put(10, "X");
+        intToRoma.put(11, "XI");
+        intToRoma.put(12, "XII");
+        intToRoma.put(13, "XIII");
+        intToRoma.put(14, "XIV");
+        intToRoma.put(15, "XV");
+        intToRoma.put(16, "XVI");
+        intToRoma.put(17, "XVII");
+        intToRoma.put(18, "XVIII");
+        intToRoma.put(19, "XIX");
+        intToRoma.put(20, "XX");
+        intToRoma.put(30, "XXX");
+        intToRoma.put(40, "XL");
+        intToRoma.put(50, "L");
+        intToRoma.put(60, "LX");
+        intToRoma.put(70, "LXX");
+        intToRoma.put(80, "LXXX");
+        intToRoma.put(90, "XC");
+        intToRoma.put(100, "C");
 
         for (int k = 0; k < 1; k++){
             res = intToRoma.get(result);
