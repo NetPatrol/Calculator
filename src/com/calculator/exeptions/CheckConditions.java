@@ -43,4 +43,9 @@ public class CheckConditions {
         Matcher checkRomaSymbols = p.matcher(exp);
         return checkRomaSymbols.find();
     }
+    public static boolean checkOperandAndOperator(String exp){
+        Pattern p = Pattern.compile("[^-+*/]");
+        Matcher checkExpInt = p.matcher(exp);
+        return checkExpInt.find();
+    }
 }

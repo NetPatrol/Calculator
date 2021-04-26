@@ -8,7 +8,7 @@ import static com.calculator.core.Runner.begin;
 public class CalculatorMessages {
 
     public static void startDoMessage() {
-        System.out.print("\t\t\tВведите выражение: \n");
+        System.out.print("\t\t\tВведите выражение: \n\n\n");
     }
     public static void choiceMenu() {
         System.out.println(
@@ -32,16 +32,18 @@ public class CalculatorMessages {
         System.out.println("+                                                                    +   +");
         System.out.println("+"+Color.ANSI_YELLOW+"                  Calculator v.1.0 by N3tHunter"+Color.ANSI_RESET+"                     +   +\n" +
                 "+                                                                    +   +\n" +
-                "+           Калькулятор получает на вход два числа  от 0 до 10       +   +\n" +
+                "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   +\n" +
+                "+                                                                    +   +\n" +
+                "+        Калькулятор получает на вход два числа  от 0 до 10          +   +\n" +
                 "+        и производит арифметические вычисления такие как:           +   +\n" +
                 "+        - сложение;                                                 +   +\n" +
                 "+        - вычитание;                                                +   +\n" +
                 "+        - умножение;                                                +   +\n" +
                 "+        - деление;                                                  +   +\n" +
-                "+           Кроме того, данный калькулятор может производить         +   +\n" +
+                "+        Кроме того, данный калькулятор может производить            +   +\n" +
                 "+        вычисления посредством ввода римских цифр от I дл X.        +   +\n" +
-                "+           Римских цифры вводите латиницей и включите CapsLock.     + ===\n" +
-                "+                                                                    + ===\n" +
+                "+        Римских цифры вводите латиницей и включите CapsLock.        + ===\n" +
+                "+                                                                    + == \n" +
                 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
     }
 
@@ -56,6 +58,6 @@ public class CalculatorMessages {
     }
 
     public static void bay(){
-        System.out.println(Color.ANSI_PURPLE+"\t\t\t\t\t\t\tДо свидания!"+Color.ANSI_RESET);
+        System.out.println(Color.ANSI_PURPLE+"\t\t\t   До свидания!\n\n\n"+Color.ANSI_RESET);
     }
 }
