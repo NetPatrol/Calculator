@@ -67,15 +67,6 @@ public class ConvertRomaToIntAndBack {
         intToRoma.put(8, "VIII");
         intToRoma.put(9, "IX");
         intToRoma.put(10, "X");
-        intToRoma.put(11, "XI");
-        intToRoma.put(12, "XII");
-        intToRoma.put(13, "XIII");
-        intToRoma.put(14, "XIV");
-        intToRoma.put(15, "XV");
-        intToRoma.put(16, "XVI");
-        intToRoma.put(17, "XVII");
-        intToRoma.put(18, "XVIII");
-        intToRoma.put(19, "XIX");
         intToRoma.put(20, "XX");
         intToRoma.put(30, "XXX");
         intToRoma.put(40, "XL");
