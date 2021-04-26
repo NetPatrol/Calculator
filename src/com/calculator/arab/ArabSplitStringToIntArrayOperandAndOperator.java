@@ -1,6 +1,6 @@
 package com.calculator.arab;
 
-import com.calculator.exeptions.CalcExeption;
+import com.calculator.exeptions.CalculatorExeption;
 
 import static com.calculator.arab.SplitStringToIntArrayOperandAndOperator.*;
 import static com.calculator.core.ParserToIntArray.getArab;
@@ -11,7 +11,7 @@ import static com.calculator.core.ParserToIntArray.setArab;
  * */
 public class ArabSplitStringToIntArrayOperandAndOperator {
 
-    public static int[] intOperand(String exp) throws CalcExeption {
+    public static int[] intOperand(String exp) throws CalculatorExeption {
         setArab(getOperand(exp));
         return getArab();
     }

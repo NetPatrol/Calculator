@@ -1,6 +1,6 @@
 package com.calculator.roma;
 
-import com.calculator.exeptions.CalcExeption;
+import com.calculator.exeptions.CalculatorExeption;
 
 import static com.calculator.roma.ConvertRomaToIntAndBack.*;
 import static com.calculator.roma.SplitStringToRomaSymbolArrayAndOperator.*;
@@ -13,7 +13,7 @@ public class RomaSplitStringToIntArrayOperandAndOperator {
      * Parse the converted array of Roman numerals to Arabic
      * numerals and get an array like int
      **/
-    public static int[] Operand(String exp) throws CalcExeption {
+    public static int[] Operand(String exp) throws CalculatorExeption {
         setArab(convertRomaToInt(romaOperand(exp)));
         return getArab();
     }

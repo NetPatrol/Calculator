@@ -1,6 +1,6 @@
 package com.calculator.core;
 
-import com.calculator.exeptions.CalcExeption;
+import com.calculator.exeptions.CalculatorExeption;
 
 import java.util.Arrays;
 /**
@@ -15,11 +15,11 @@ public class ParserToIntArray {
     public static int[] getArab() {
         return arab;
     }
-    public static void setArab(String[] exp) throws CalcExeption {
+    public static void setArab(String[] exp) throws CalculatorExeption {
             int[] array = Arrays.stream(exp).mapToInt(Integer::parseInt).toArray();
             for (int j : array) {
                 if (j >= 11 | j <= -1)
-                    throw new CalcExeption();}
+                    throw new CalculatorExeption();}
             arab = array;
     }
 }

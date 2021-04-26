@@ -43,9 +43,7 @@ public class ConvertRomaToIntAndBack {
         romaToInt.put("LXXX", "80");
         romaToInt.put("XC", "90");
         romaToInt.put("C", "100");
-        for (int k = 0; k < romaOperand.length; k++){
-            romaOperand[k] = romaToInt.get(romaOperand[k]);
-        }
+        for (int k = 0; k < romaOperand.length; k++) romaOperand[k] = romaToInt.get(romaOperand[k]);
         return romaOperand;
     }
     /**
@@ -59,7 +57,7 @@ public class ConvertRomaToIntAndBack {
     private static String result;
     public static String convertIntToRoma(int res){
         Map<Integer, String> intToRoma = new HashMap<>();
-        intToRoma.put(1, "I");
+        intToRoma.put(1, "I")
         intToRoma.put(2, "II");
         intToRoma.put(3, "III");
         intToRoma.put(4, "IV");
