@@ -19,7 +19,7 @@ public class ParserToIntArray {
             int[] array = Arrays.stream(exp).mapToInt(Integer::parseInt).toArray();
             for (int j : array) {
                 if (j >= 11 | j <= -1)
-                    throw new CalculatorExeption();}
+                    throw new CalculatorExeption("Числа данной величины не поддерживаются калькулятором");}
             arab = array;
     }
 }
