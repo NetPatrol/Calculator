@@ -57,7 +57,7 @@ public class ConvertRomaToIntAndBack {
     private static String result;
     public static String convertIntToRoma(int res){
         Map<Integer, String> intToRoma = new HashMap<>();
-        intToRoma.put(1, "I")
+        intToRoma.put(1, "I");
         intToRoma.put(2, "II");
         intToRoma.put(3, "III");
         intToRoma.put(4, "IV");
