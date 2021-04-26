@@ -1,4 +1,4 @@
-package com.calculator.out;
+package com.calculator.show;
 
 public class Color {
      public static final String ANSI_RESET = "\u001B[0m";

@@ -3,25 +3,8 @@ package com.calculator.roma;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RomaIO {
-    private static String[] roma;
-    private static String res;
-    /**
-     * We get all the numbers from the entered expression
-     * by splitting the string through, using a regular expression
-     * @return*/
-    public static String[] romaOperand(String exp){
-        roma = exp.split("([ -A-Z]+)");
-        return roma;
-    }
-    /**
-     * Emitting expression signs [+ - * /]
-     * by splitting the string through, using a regular expression
-     * @return*/
-    public static String[] romaOperator(String exp){
-        roma = exp.split("([^ -A-Z]+)");
-        return roma;
-    }
+public class ConvertRomaToIntAndBack {
+
     /**
      * Convert Roman Numbers to Arabic Numbers
      * for which we create a correspondence dictionary,
@@ -73,7 +56,8 @@ public class RomaIO {
      *
      * e.g. the result is 7 will be converted to Roman VII
      * @return*/
-    public static String convertIntToRoma(int result){
+    private static String result;
+    public static String convertIntToRoma(int res){
         Map<Integer, String> intToRoma = new HashMap<>();
         intToRoma.put(1, "I");
         intToRoma.put(2, "II");
@@ -105,8 +89,8 @@ public class RomaIO {
         intToRoma.put(100, "C");
 
         for (int k = 0; k < 1; k++){
-            res = intToRoma.get(result);
+            result = intToRoma.get(res);
         }
-        return res;
+        return result;
     }
 }

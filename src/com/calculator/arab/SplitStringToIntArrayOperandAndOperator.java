@@ -1,6 +1,6 @@
 package com.calculator.arab;
 
-class IntIO {
+class SplitStringToIntArrayOperandAndOperator {
 
     /**
      * We get all the numbers from the entered expression
