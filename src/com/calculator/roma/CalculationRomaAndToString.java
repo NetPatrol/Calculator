@@ -26,12 +26,13 @@ public class CalculationRomaAndToString {
         String[] newOperator = Operator(exp);
         int result = getCalc(newOperand, newOperator);
         if (result <= 0) throw new CalculatorExeption("Нет такого числа в Римском алфавите");
-        if (result >= 11 & result < 100 & (result%10 != 0)){
+        if (result >= 11 && (result%10 != 0)){
             n = String.valueOf(result);
             setArab(romaResult(n));
             array = getArab();
             digit = array[0] * 10;
             unit = array[1];
+            total = convertIntToRoma(digit) + convertIntToRoma(unit);
             return total;
         } else return convertIntToRoma(result);
     }
