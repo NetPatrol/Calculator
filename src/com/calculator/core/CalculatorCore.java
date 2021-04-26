@@ -5,6 +5,8 @@ import com.calculator.exeptions.CalculatorExeption;
 public class CalculatorCore {
     private static int result;
     public static int getCalc(int[] operand, String[] operator) throws CalculatorExeption {
+        if (operator.length == 0 )
+            throw new CalculatorExeption("В выражении отсутствует оператор");
         int intOperator = operator.length - 1;
         String sign = operator[intOperator];
         char totalSign = sign.charAt(0);
