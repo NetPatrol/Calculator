@@ -2,7 +2,7 @@ package com.calculator.arab;
 
 import com.calculator.exeptions.CalculatorExeption;
 
-import static com.calculator.arab.SplitStringToIntArrayOperandAndOperator.*;
+import static com.calculator.arab.SplitStringToArrayOperandAndOperator.*;
 import static com.calculator.core.ParserToIntArray.getArab;
 import static com.calculator.core.ParserToIntArray.setArab;
 

@@ -18,4 +18,9 @@ public class SplitStringToRomaSymbolArrayAndOperator {
         roma = exp.split("([^ -A-Z]+)");
         return roma;
     }
+
+    public static String[] romaResult(String exp){
+        roma = exp.split("");
+        return roma;
+    }
 }
