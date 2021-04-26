@@ -8,7 +8,7 @@ import java.util.Scanner;
 import static com.calculator.arab.CalculationArab.result;
 import static com.calculator.core.InputUserString.getExp;
 import static com.calculator.core.InputUserString.setExp;
-import static com.calculator.roma.CalculationRomaAndToString.intResult;
+import static com.calculator.roma.CalculationRomaAndToString.*;
 import static com.calculator.show.CalculatorMessages.*;
 import static java.lang.System.in;
 import static java.lang.System.out;
@@ -29,7 +29,8 @@ public class Runner {
         if (CheckConditions.checkOnlyInt(exp))
             printArabResult(result(exp));
         else if (CheckConditions.checkOnlyRoman(exp))
-            printRomaResult(intResult(exp));
+            setTotalCalculation(exp);
+            printRomaResult(getTotalCalculation());
 
         out.println();
         choiceMenu();

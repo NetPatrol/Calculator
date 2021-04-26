@@ -9,6 +9,7 @@ import static com.calculator.roma.ConvertRomaToIntAndBack.convertIntToRoma;
 import static com.calculator.roma.RomaSplitStringToIntArrayOperandAndOperator.Operand;
 import static com.calculator.roma.RomaSplitStringToIntArrayOperandAndOperator.Operator;
 import static com.calculator.roma.SplitStringToRomaSymbolArrayAndOperator.*;
+import static java.lang.String.*;
 
 /**
  * if the result is greater than 10 and is not divisible by 10 without a remainder
@@ -17,24 +18,57 @@ import static com.calculator.roma.SplitStringToRomaSymbolArrayAndOperator.*;
  * result as a string, otherwise simply return the converted result
  */
 public class CalculationRomaAndToString {
-    static String n;
-    static int digit;
-    static int unit;
-    static int[] array;
-    static String total;
-    public static String intResult(String exp) throws CalculatorExeption {
+    static int calculation;
+    static String unitCalculation;
+    static String digitCalculation;
+    static String totalCalculation;
+
+    public static String getTotalCalculation() {
+        return totalCalculation;
+    }
+
+    public static void setTotalCalculation(String exp) throws CalculatorExeption {
+        setCalculation(exp);
+        if (getCalculation() >= 11 && getCalculation()%10 != 0){
+              setDigitCalculation(getCalculation());
+              totalCalculation = getDigitCalculation();
+        } else {
+              setUnitCalculation(getCalculation());
+              totalCalculation = getUnitCalculation();
+        }
+    }
+
+    public static int getCalculation() {
+        return calculation;
+    }
+
+    public static void setCalculation(String exp) throws CalculatorExeption {
         int[] newOperand = Operand(exp);
         String[] newOperator = Operator(exp);
-        int result = getCalc(newOperand, newOperator);
-        if (result <= 0) throw new CalculatorExeption("Нет такого числа в Римском алфавите");
-        if (result >= 11 && result%10 != 0){
-            n = String.valueOf(result);
-            setArab(romaResult(n));
-            array = getArab();
-            digit = array[0] * 10;
-            unit = array[1];
-            total = convertIntToRoma(digit) + convertIntToRoma(unit);
-            return total;
-        } else return convertIntToRoma(result);
+        calculation = getCalc(newOperand, newOperator);
+    }
+
+    public static String getUnitCalculation() {
+        return unitCalculation;
+    }
+
+    public static void setUnitCalculation(int calculation) throws CalculatorExeption {
+        if (calculation <= 0) throw new CalculatorExeption("Нет такого числа в Римском алфавите");
+        unitCalculation = convertIntToRoma(calculation);
+    }
+
+
+    static int[] array;
+    static int digit, unit;
+
+    public static String getDigitCalculation() {
+        return digitCalculation;}
+
+    public static void setDigitCalculation(int calculation) throws CalculatorExeption {
+        setArab(romaCalculation(valueOf(calculation)));
+        array = getArab();
+        digit = array[0] * 10;
+        unit = array[1];
+        digitCalculation = convertIntToRoma(digit) + convertIntToRoma(unit);
     }
 }

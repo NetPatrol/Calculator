@@ -19,7 +19,7 @@ public class SplitStringToRomaSymbolArrayAndOperator {
         return roma;
     }
 
-    public static String[] romaResult(String exp){
+    public static String[] romaCalculation(String exp){
         roma = exp.split("");
         return roma;
     }
