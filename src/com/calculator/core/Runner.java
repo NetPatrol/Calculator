@@ -28,9 +28,10 @@ public class Runner {
 
         if (CheckConditions.checkOnlyInt(exp))
             printArabResult(result(exp));
-        else if (CheckConditions.checkOnlyRoman(exp))
+        else if (CheckConditions.checkOnlyRoman(exp)){
             setTotalCalculation(exp);
             printRomaResult(getTotalCalculation());
+        }
 
         out.println();
         choiceMenu();

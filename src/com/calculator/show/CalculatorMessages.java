@@ -8,7 +8,7 @@ import static com.calculator.core.Runner.begin;
 public class CalculatorMessages {
 
     public static void startDoMessage() {
-        System.out.print("\t\t\tВведите выражение: \n\n\n");
+        System.out.print("\t\t\tВведите выражение: ");
     }
     public static void choiceMenu() {
         System.out.println(
@@ -52,8 +52,6 @@ public class CalculatorMessages {
     }
 
     public static void printRomaResult(String num){
-
-
         System.out.println(Color.ANSI_PURPLE + "\t\t\tРезультат равен: " + num + Color.ANSI_RESET);
     }
 
