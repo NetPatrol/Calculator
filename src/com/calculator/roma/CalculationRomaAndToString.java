@@ -11,10 +11,11 @@ import static com.calculator.roma.RomaSplitStringToIntArrayOperandAndOperator.Op
 import static com.calculator.roma.SplitStringToRomaSymbolArrayAndOperator.*;
 
 /**
- * We return the data to the calculator, the result obtained,
- * we check the calculations for compliance with the condition
- * n <= 0, if we return everything well, if not, throw an exception
- **/
+ * if the result is greater than 10 and is not divisible by 10 without a remainder
+ * parse it into elements into an array, multiply the first element of the array by 10,
+ * then find a match in the table of Roman symbols for each element, and return the
+ * result as a string, otherwise simply return the converted result
+ */
 public class CalculationRomaAndToString {
     static String n;
     static int digit;
@@ -26,7 +27,7 @@ public class CalculationRomaAndToString {
         String[] newOperator = Operator(exp);
         int result = getCalc(newOperand, newOperator);
         if (result <= 0) throw new CalculatorExeption("Нет такого числа в Римском алфавите");
-        if (result >= 11 && (result%10 != 0)){
+        if (result >= 11 && result%10 != 0){
             n = String.valueOf(result);
             setArab(romaResult(n));
             array = getArab();
