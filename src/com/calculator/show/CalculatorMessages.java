@@ -30,7 +30,7 @@ public class CalculatorMessages {
         System.out.println("   =======================================================================");
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   +");
         System.out.println("+                                                                    +   +");
-        System.out.println("+"+Color.ANSI_YELLOW+"                  Calculator v.1.0 by N3tPatrol"+Color.ANSI_RESET+"                     +   +\n" +
+        System.out.println("+"+Color.ANSI_YELLOW+"                  Calculator v.1.0 by N3tHunter"+Color.ANSI_RESET+"                     +   +\n" +
                 "+                                                                    +   +\n" +
                 "+           Калькулятор получает на вход два числа  от 0 до 10       +   +\n" +
                 "+        и производит арифметические вычисления такие как:           +   +\n" +
