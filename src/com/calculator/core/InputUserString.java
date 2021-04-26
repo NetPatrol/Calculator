@@ -16,10 +16,8 @@ public class InputUserString {
         return exp;
     }
     public static void setExp(String e) throws CalculatorExeption {
-        if (checkIntEndString(e))
-            throw new CalculatorExeption("Калькулятор может выполнять вычисления одновременно или с римскими или с арабскими числами.");
-        if (checkAbsenceAllOfExceptRomanAndInteger(e))
-            throw new CalculatorExeption("Неверный формат выражения");
+        if (checkIntEndString(e)) throw new CalculatorExeption("Калькулятор может выполнять вычисления одновременно или с римскими или с арабскими числами.");
+        if (checkAbsenceAllOfExceptRomanAndInteger(e)) throw new CalculatorExeption("Неверный формат выражения");
         exp = e;
     }
 }

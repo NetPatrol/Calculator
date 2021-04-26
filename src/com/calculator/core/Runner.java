@@ -25,14 +25,12 @@ public class Runner {
         startDoMessage();
         setExp(s.nextLine());
         String exp = getExp();
-
         if (CheckConditions.checkOnlyInt(exp))
             printArabResult(result(exp));
         else if (CheckConditions.checkOnlyRoman(exp)){
             setTotalCalculation(exp);
             printRomaResult(getTotalCalculation());
         }
-
         out.println();
         choiceMenu();
         choiceAction(s.nextLine());
