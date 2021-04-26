@@ -1,6 +1,6 @@
 README
 
-                    Calculator v.1.0 by N3tPatrol
+                    Calculator v.1.0 by N3tHuner
 -------------------------------------------------------------
 
 
