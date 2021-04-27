@@ -21,7 +21,8 @@ public class CalculatorMessages {
     }
 
     public static void choiceAction(String e) throws CalculatorExeption {
-        if (!e.equals("2")) {
+
+        if (!e.equalsIgnoreCase("q")) {
             if((CheckConditions.checkAbsenceAllOfExceptRomanAndInteger(e) | e.isEmpty()) | e.equals("1")) begin();
         } else {
             bay();
